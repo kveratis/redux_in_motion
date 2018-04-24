@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-//import './index.css';
-//import App from './App';
-//import registerServiceWorker from './registerServiceWorker';
+import store from './store';
+import { VANILLA } from './constants/flavors';
+import { actions } from './ducks/freezer';
 
-//ReactDOM.render(<App />, document.getElementById('root'));
-//registerServiceWorker();
+store.subscribe(() => console.log(store.getState()));
+
+store.dispatch(actions.updateTemperature(-8));
+store.dispatch(actions.addProductToFreezer(VANILLA, 15));
