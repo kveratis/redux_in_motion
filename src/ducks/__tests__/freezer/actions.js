@@ -33,3 +33,15 @@ describe('Freezer addProductToFreezer()', function() {
     expect(action.payload.amount).toEqual(20);
   });
 });
+
+describe('Freezer removeScoop()', function() {
+  it('should contain the right action type', function() {
+    const action = actions.removeScoop('foo');
+    expect(action.type).toEqual(types.REMOVE_SCOOP);
+  });
+
+  it('should have the flavor name in the payload', function() {
+    const action = actions.removeScoop('foo');
+    expect(action.payload).toEqual('foo');
+  });
+});
