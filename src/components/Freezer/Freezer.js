@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import * as FLAVORS from '../../constants/flavors';
-
 import Panel from '../Panel/Panel';
 import Button from '../Button/Button';
 import FreezerFlavor from '../FreezerFlavor/FreezerFlavor';
